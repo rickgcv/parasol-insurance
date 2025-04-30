@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: bootstrap
-  namespace: openshift-gitops
+  namespace: parasol
 spec:
   generators:
   - list:
@@ -50,7 +50,7 @@ spec:
   template:
     metadata:
       name: '{{name}}'
-      namespace: openshift-gitops
+      namespace: parasol
       labels:
         component: bootstrap
         purpose: '{{name}}'
